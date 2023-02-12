@@ -37,3 +37,17 @@ fn main() {
 
   println!("{} {}", required_wrapping_paper, required_ribbon);
 }
+
+#[test]
+fn wrapping_paper_test() {
+  let dimensions: Vec<u64> = vec![3,4,5];
+  let result = calculate_wrapping_paper(dimensions[0], dimensions[1], dimensions[2]);
+  assert_eq!(result, 106);
+}
+
+#[test]
+fn ribbon_test() {
+  let dimensions: Vec<u64> = vec![3,4,5];
+  let result = calculate_ribbon(dimensions[0], dimensions[1], dimensions[2]);
+  assert_eq!(result, 74);
+}
